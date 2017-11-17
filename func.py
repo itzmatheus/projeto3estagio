@@ -24,7 +24,7 @@ def import_invites(arq):  #Função que importa um arquivo de texto e adiciona o
         return colecao
 
 #Script p criar pdf
-def create_pdf(lista)
+def create_pdf(lista):
     try:
         nome_pdf = 'convidados'
         pdf = canvas.Canvas('files/{}.pdf'.format(nome_pdf))
