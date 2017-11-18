@@ -1,7 +1,7 @@
 # Projeto de Algoritmos e Programação - 3º Estágio
 #### Equipe: Matheus José e Gabriel Santana
 
-Sobre o projeto: Criação de uma aplicação para importar um arquivo de texto, gerar um PDF no formato requisitado e enviar por e-mail.
+Sobre o projeto: Criação de uma aplicação para importar um arquivo de texto, gerar um PDF com as informações coletadas e enviar por e-mail.
 
 ##### Requisito necessário para funcionamento da aplicação: Python 3
 Python 3 -> https://www.python.org/downloads/
