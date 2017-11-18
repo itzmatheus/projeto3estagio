@@ -45,8 +45,8 @@ def create_pdf(lista):
 #Criado por http://naelshiab.com/tutorial-send-email-python/
 def send_mail(attachment):
     try:
-        fromaddr = "Email para enviar"
-        toaddr = "Email p receber"
+        fromaddr = "projeto3estagio@outlook.com"
+        toaddr = 'matheusjoselfm@gmail.com'
 
         msg = MIMEMultipart()
 
@@ -54,7 +54,7 @@ def send_mail(attachment):
         msg['To'] = toaddr
         msg['Subject'] = "Lista de convidados - Equipe: Matheus e Gabriel"
 
-        body = "\nSegue a lista de convidados em PDF. \nAtt, Matheus José e Gabriel Santana."
+        body = "\nSegue a lista de convidados em PDF. \nAtt. Matheus José e Gabriel Santana."
 
         msg.attach(MIMEText(body, 'plain'))
 
@@ -70,7 +70,7 @@ def send_mail(attachment):
 
         server = smtplib.SMTP('smtp.outlook.com', 587)
         server.starttls()
-        server.login(fromaddr, "SenhaAquiDoEMail")
+        server.login(fromaddr, "projeto123456")
         text = msg.as_string()
         server.sendmail(fromaddr, toaddr, text)
         server.quit()
