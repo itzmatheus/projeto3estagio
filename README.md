@@ -24,9 +24,13 @@ Digite no terminal:
 - Verifique se uma pasta foi criada com o nome do ambiente que você escolheu.
 - Caso a pasta com o nome escolhido for criada, agora é hora de ativar.
 
-Digite no terminal:
+Caso use Linux digite no terminal:
 ```sh
 ~/projeto3estagio $ source NomeDoAmbiente/bin/activate
+```
+Caso use Windows digite no terminal:
+```sh
+~/projeto3estagio $ NomeDoAmbiente\Scripts\activate
 ```
 - Veja se ficou parecido com a linha abaixo:
 ```sh
