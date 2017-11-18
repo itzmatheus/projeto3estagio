@@ -1,7 +1,7 @@
-# Projeto de Algoritmos e Programação com Python - 3º Estágio
+# Projeto de Algoritmos e Programação - 3º Estágio
 #### Equipe: Matheus José e Gabriel Santana
 
-Sobre o projeto: Criação de uma aplicação para importar um arquivo de texto, gerar um PDF no formato requisitado e enviar por e-mail.
+Sobre o projeto: Criação de uma aplicação para importar um arquivo de texto, gerar um PDF com as informações coletadas e enviar por e-mail.
 
 ##### Requisito necessário para funcionamento da aplicação: Python 3
 Python 3 -> https://www.python.org/downloads/
@@ -23,6 +23,7 @@ Digite no terminal:
 ```
 - Verifique se uma pasta foi criada com o nome do ambiente que você escolheu.
 - Caso a pasta com o nome escolhido for criada, agora é hora de ativar.
+
 Digite no terminal:
 ```sh
 ~/projeto3estagio $ source NomeDoAmbiente/bin/activate
@@ -40,7 +41,7 @@ Digite no terminal:
 
 Com o ambiente ativado digite:
  ```sh
-~/projeto3estagio $ pip --version
+(NomeDoAmbiente)  ~/projeto3estagio $ pip --version
 pip 9.0.1 from...
 ```
 - Com o pip instalado, vamos instalar algumas bibliotecas externas que utilizei para criação da aplicação. Como exemplo o reportlab, uma ferramenta que facilita gerar PDF.
@@ -48,7 +49,7 @@ pip 9.0.1 from...
 
 Para instalar todas as bibliotecas digite:
  ```sh
-~/projeto3estagio $ pip install -r requirements.txt
+(NomeDoAmbiente)  ~/projeto3estagio $ pip install -r requirements.txt
 ```
 - Se não aparecer nenhum erro, houve sucesso nas instalações e podemos prosseguir para o último passo.
 #### 3 - Passo: Rodar a aplicação
@@ -56,7 +57,7 @@ Para instalar todas as bibliotecas digite:
 
 Para rodar-la basta digitar no terminal:
  ```sh
-~/projeto3estagio $ python main.py
+(NomeDoAmbiente)  ~/projeto3estagio $ python main.py
 ```
 #### Detalhes da aplicação
 - func.py -> Arquivo com as funções criadas p/ o projeto.
