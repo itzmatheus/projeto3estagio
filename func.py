@@ -26,7 +26,8 @@ def import_invites(arq):  #Função que importa um arquivo de texto e adiciona o
 #Script p criar pdf
 def create_pdf(lista):
     try:
-        nome_pdf = 'convidados'
+        global nome_pdf
+        nome_pdf = input('Informe o nome do PDF: ')
         pdf = canvas.Canvas('files/{}.pdf'.format(nome_pdf))
         y = 300
         for nome,telefone in lista.items():
@@ -37,9 +38,9 @@ def create_pdf(lista):
         pdf.setFont("Helvetica-Bold", 12)
         pdf.drawString(245,724, 'Nomes e Telefones')
         pdf.save()
-        print('PDF Criado com sucesso!\nLocal:/files/{}.pdf'.format(nome_pdf))
+        print('\nPDF Criado com sucesso!\nLocal:/files/{}.pdf'.format(nome_pdf))
     except:
-        print('Erro ao gerar o pdf /files/{}.pdf'.format(nome_pdf))
+        print('\nErro ao gerar o pdf /files/{}.pdf'.format(nome_pdf))
 
 #Script p enviar e-mail com arquivo indexado
 #Criado por http://naelshiab.com/tutorial-send-email-python/
@@ -47,7 +48,6 @@ def send_mail(attachment):
     try:
         fromaddr = "projeto3estagio@outlook.com"
         toaddr = 'matheusjoselfm@gmail.com'
-
         msg = MIMEMultipart()
 
         msg['From'] = fromaddr
@@ -58,13 +58,13 @@ def send_mail(attachment):
 
         msg.attach(MIMEText(body, 'plain'))
 
-        filename = "convidados.pdf"
+        filename = nome_pdf
         # attachment = open("files/convidados.pdf", "rb")
 
         part = MIMEBase('application', 'octet-stream')
         part.set_payload((attachment).read())
         encoders.encode_base64(part)
-        part.add_header('Content-Disposition', "attachment; filename= %s" % filename)
+        part.add_header('Content-Disposition', "attachment; filename= %s.pdf" % filename)
 
         msg.attach(part)
 
@@ -74,6 +74,6 @@ def send_mail(attachment):
         text = msg.as_string()
         server.sendmail(fromaddr, toaddr, text)
         server.quit()
-        print('Email enviado para {}\nTítulo: {}'.format(msg['To'],msg['Subject']))
+        print('\nEmail enviado para {}\nTítulo: {}'.format(msg['To'],msg['Subject']))
     except:
-        print("Ocorreu um erro no processo de envio do e-mail para {}.\n Por favor, tente novamente!".format(msg['To']))
+        print("\nOcorreu um erro no processo de envio do e-mail para {}.\n Por favor, tente novamente!".format(msg['To']))
