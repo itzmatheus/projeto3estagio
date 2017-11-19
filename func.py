@@ -21,7 +21,6 @@ def import_invites(arq):  #Função que importa um arquivo de texto e adiciona o
             for linha_2 in lista: #Segundo corte agora para separar nome(chave) e o telefone(valor) e adicionar num dicionario.
                 nome,telefone = linha_2.split('-')
                 colecao[nome] = telefone
-                print(nome,' : ',telefone)
         return colecao
 
 #Script p criar pdf
