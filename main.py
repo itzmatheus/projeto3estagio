@@ -1,3 +1,4 @@
+#coding: utf-8
 """
 Principal
 Versão: 0.1
@@ -7,12 +8,12 @@ Data: 11/2017
 """
 from func import *
 
-arq = open('files/convidados.txt','r') #Informe o diretório da lista.
-lista = import_invites(arq)
-arq.close()
+arq = open('files/convidados.txt','r') #leitura do arquivo de texto
+lista = import_invites(arq)# variavel lista armazena o valor retornado pela funçao.
+arq.close()#fechando arquivo
 
-create_pdf(lista)
+pdf = create_pdf(lista)#Chamando a função para criar pdf, com parâmentro lista.
 
-attachment = open('files/convidados.pdf','rb')
-send_mail(attachment)
-attachment.close()
+attachment = open('files/{}.pdf'.format(pdf),'rb')# para leitura do arquivo pdf
+send_mail(attachment)#chamando a função que envia e-mail
+attachment.close()# fechando arquivo.
