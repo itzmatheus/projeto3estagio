@@ -46,6 +46,7 @@ def create_pdf(lista):
     return nome_pdf
 #Parte 3 do projeto
 #Script p enviar e-mail com arquivo indexado
+#Criado por http://naelshiab.com/tutorial-send-email-python/
 def send_mail(attachment):
     try: #Método para tratamento de erros
         fromaddr = "projeto3estagio@outlook.com" # E-mail que vai ser utilizado para encaminhar arquivo pdf.
