@@ -50,7 +50,7 @@ def create_pdf(lista):
 def send_mail(attachment):
     try: #Método para tratamento de erros
         fromaddr = "projeto3estagio@outlook.com" # E-mail que vai ser utilizado para encaminhar arquivo pdf.
-        toaddr = 'matheusjoselfm@gmail.com'#E-mail que vai receber arquivo pdf.
+        toaddr = 'app.p1.unipe@gmail.com'#E-mail que vai receber arquivo pdf.
         msg = MIMEMultipart()#váriavel que vai receber função multipar
 
         msg['From'] = fromaddr #Adicionar no dicionario o e-mail remetente
